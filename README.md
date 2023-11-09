@@ -1,37 +1,57 @@
-# proyectof
+# Proyecto Final 3 - Buscador de Películas
 
-proyecto final 3
+Este proyecto ha sido creado como parte del módulo 3 del Curso de Desarrollo de Aplicaciones Web. Su objetivo es desarrollar un buscador de películas que utiliza una API para obtener datos, los almacena en una base de datos MySQL y permite visualizarlos localmente.
 
-Este proyecto está creado para el módulo 3 del Curso de Desarrollo de aplicaciones web.
+## Finalidad
 
-Finalidad
+El propósito de este proyecto es implementar un buscador de películas que interactúa con una API de `api.themoviedb.org` para obtener información sobre películas. Los datos se almacenan en una base de datos MySQL y se pueden gestionar localmente.
 
-Es un buscador de peliculas sobre una API, enlazado a una base de datos MYSQL para poder grabarlas y tenerlas en local.
+## Funcionalidad
 
-Funcionalidad
+Para ejecutar el proyecto, sigue estos pasos:
 
--Para hacer funcionar el proyecto, hay que tener una base de datos en este caso se ha trabajado con MySQHL workbench.
--Hay que configurar los user, puertos, contraseñas y parámetros para que coincidan con los del archivo config.js
-- Al bajarse el repositorio falta la carpeta node_modules, así que con la terminal hay que navegar hasta la capeta del proyecto y usar el comando -> npm install . este comando instala node en el proyecto.
-- Una vez se haya instalado node y se tenga configurada la base de datos, con las carpetas correspondientes, podemos hacer un npm run dev en la carpeta del proyecto en la terminal y luego go live del VSC para tener nuestro buscador funcionando desde el local.
-- Es posible que haya un error de cors con el navegador así que se recomienda instalar un puglin de cors para chrome u otro navegador que se esté utilizando.
+1. Configuración de la base de datos:
+   - Se requiere una base de datos MySQL. Se recomienda el uso de MySQL Workbench.
+   - Ajusta los parámetros de usuario, puertos, contraseñas y otros detalles en el archivo `config.js` para que coincidan con la configuración de tu base de datos.
 
-Una vez esté todo hecho hay que ir al go live para ver el buscador en local.
+2. Preparación del entorno:
+   - Es probable que la carpeta `node_modules` esté ausente al descargar el repositorio. En la terminal, navega hasta la carpeta del proyecto y ejecuta el comando:
+     ```
+     npm install
+     ```
+     Esto instalará las dependencias de Node necesarias para el proyecto.
 
-Datos
+3. Iniciar el buscador:
+   - Una vez instaladas las dependencias y configurada la base de datos, ejecuta el comando en la terminal:
+     ```
+     npm run dev
+     ```
+   - Luego, utiliza la extensión "Go Live" de Visual Studio Code para acceder al buscador localmente.
 
-- Los datos son recogidos de una API mediante un fetch llamada, api.themoviedb.org.
-- El repositorio donde está guardado el proyecto es : https://github.com/Kikovaldi/proyectof
-- Para cambiar el proyecto de repositorio de git hab hay que seguir los siguientes pasos, una vez hechos al hacer git add, commit push, se subiran a su repositorio. 
+4. Nota sobre CORS:
+   - Puede haber un error de CORS al utilizar el buscador en el navegador. Se recomienda instalar un plugin de CORS en tu navegador (por ejemplo, una extensión para Chrome u otro navegador).
 
-- Primeramente debes crear un repositorio vacío en github y copiar el enlace.
-- en la terminal en la carpeta del proyecto debemos escribir:
-    - git remote remove origin
-    - git remote add origin (URL)
-    - git branch -M main
-    - git push -u origin main
-una vez realizado ya esta enlazado con tu proyecto ya puedes proceder con el add commit y push.
+## Datos
 
-Extra
+- Los datos son obtenidos de la API `api.themoviedb.org` mediante una solicitud Fetch.
+- Repositorio del proyecto: [Enlace al repositorio](https://github.com/Kikovaldi/proyectof)
 
-- Como posibles opciones en un futuro se podría incluir unas paginas vistas por género, para poder filtrarlas por ellos.
+## Cambio de Repositorio Git
+
+Si deseas cambiar el repositorio de Git para este proyecto, sigue estos pasos:
+
+1. Crea un repositorio vacío en GitHub y copia su enlace.
+2. En la terminal, dentro de la carpeta del proyecto, ejecuta los siguientes comandos:
+
+git remote remove origin
+git remote add origin <URL_del_nuevo_repositorio>
+git branch -M main
+git push -u origin main
+
+
+Una vez completado, el repositorio estará enlazado con tu nuevo proyecto y podrás continuar con `add`, `commit` y `push`.
+
+## Posibles Mejoras
+
+Como futuras opciones de desarrollo, se podría considerar la implementación de páginas vistas por género, lo que permitiría filtrar las películas por categorías.
+
